@@ -57,7 +57,7 @@ onAddLead()
           <option value="converted">Converted</option>
         </select>
 
-        <button type="submit">Add Lead</button>
+        <button disabled={!formData.name || !formData.email} type="submit">Add Lead</button>
       </form>
     </section>
   );

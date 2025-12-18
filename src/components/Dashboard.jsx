@@ -9,8 +9,13 @@ export default function Dashboard(){
     })
         const [leads, setLeads] = useState([]);
 function handleAddLead() {
-  setLeads((prev) => [...prev, formData]);
+    if(formData.name==="" || formData.email===""){
+        return
+    }else{
+ setLeads((prev) => [...prev, formData]);
   setFormData({ name: "", email: "", phone: "", status: "" });
+    }
+ 
 }
     return (
         <>
